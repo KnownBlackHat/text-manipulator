@@ -14,7 +14,7 @@ export default function Textarea(props) {
 				<span className='font-bold'>Status: </span>
 				<span> Words: {text.split(" ").filter((word)=>{return word.length > 0}).length}</span><span> Length: {text.length} </span>
 			</div>
-			<div className='container space-x-8 mx-8 flex  justify-between'>
+			<div className='overflow-auto space-x-8 mx-4 flex  justify-between'>
 				<button className="bg-green-500 p-2 rounded text-white" onClick={() => { settext(text.toUpperCase()) }}>UPPERCASE</button>
 				<button className="bg-green-500 p-2 rounded text-white" onClick={() => { settext(text.toLowerCase()) }}>lowercase</button>
 				<button className="bg-green-500 p-2 rounded text-white" onClick={() => { settext(text.split(/[ ]+/).join(" ").trim()) }}>Remove White Space</button>
